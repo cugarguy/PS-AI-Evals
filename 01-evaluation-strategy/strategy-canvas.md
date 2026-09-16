@@ -39,7 +39,7 @@ We prioritize Hallucination Rate over Latency because Ascend IQ serves VPs makin
 
 ### Trade-off 3 · Robustness ↔ Latency
 
-We prioritize Robustness over Latency because when a conflict is unavoidable, no unsupported claim is more important than handling every variation of phrasing.
+We prioritize Robustness over Latency because reliable handling of varied customer language is more important than being faster.
 
 ---
 _Generated from the AI Evaluation Strategy Canvas, M1 lab tool, AI Evals Certification._
