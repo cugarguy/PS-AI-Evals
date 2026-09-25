@@ -2,7 +2,7 @@
 
 > My final project for Product School's **AI Evals** certification. One evaluation system for a real LLM feature, from strategy, through failure discovery and an automated eval suite, to the gates and governance that let it ship safely.
 
-This is a **template repo**. Click **Use this template → Create a new repository**, name it `ai-evals` (or `<your-feature>-evals`), and fill in one folder per module as you go. The repo URL is your submission.
+This is an in-progress individual submission. Modules 1–4 are complete; Modules 5–6 remain pending. The repo URL will be the submission record when the final memo and pitch are complete.
 
 > **Tools & cost.** The eval platform is **free** — LangSmith's Developer tier (5,000 traces/month) needs **no credit card**. The only real cost is **model usage** (OpenAI or Claude), typically a few cents for the whole course. If your IT blocks LangSmith, **promptfoo** (open-source, no signup, runs locally) is a supported fallback, or follow the instructor's live demo and still complete the written artifacts. Keep model keys in a gitignored `.env`, never commit them.
 
@@ -12,25 +12,25 @@ This is a **template repo**. Click **Use this template → Create a new reposito
 
 | Module | Artifact | Status | File |
 |---|---|---|---|
-| M1 | **Evaluation Strategy Canvas** | ☐ | `01-evaluation-strategy/strategy-canvas.md` |
-| M1 | **Eval harness proof** (links + screenshots) | ☐ | `01-evaluation-strategy/eval-harness-proof.md` |
-| M2 | **Failure audit log** | ☐ | `02-failure-discovery/audit-log.md` |
-| M2 | **Failure Taxonomy** | ☐ | `02-failure-discovery/failure-taxonomy.md` |
-| M3 | **Runnable eval suite** (results) | ☐ | `03-eval-suites/lab-1-eval-suite.md` |
-| M3 | **Trajectory eval** (scorecard) | ☐ | `03-eval-suites/lab-1b-trajectory.md` |
-| M3 | **Judge calibration** (κ) | ☐ | `03-eval-suites/lab-judge-calibration.md` |
-| M3 | **Eval Spec** (5-part spec + audience messages) | ☐ | `03-eval-suites/lab-2-eval-spec.md` |
-| M4 | **Eval gate map** (severity × placement) | ☐ | `04-eval-gates/lab-1-gate-map.md` |
-| M4 | **CI gate policy** (PR #218 replay) | ☐ | `04-eval-gates/lab-ci-gate-policy.md` |
-| M4 | **Launch strategy** (release criteria + CI policy + mitigation) | ☐ | `04-eval-gates/lab-2-launch-strategy.md` |
-| M5 | **Coverage matrix** | ☐ | `05-scale/lab-1-coverage-matrix.md` |
-| M5 | **Eval budget** | ☐ | `05-scale/lab-2-budget-crisis.md` |
-| M6 | **Ship / Hold memo** | ☐ | `06-culture/lab-1-ship-hold-memo.md` |
-| M6 | **Final pitch deck** (generated HTML) | ☐ | `06-culture/lab-2-final-pitch.html` |
+| M1 | **Evaluation Strategy Canvas** | ✅ Complete | `01-evaluation-strategy/strategy-canvas.md` |
+| M1 | **Eval harness proof** (links + screenshots) | ✅ Complete | `01-evaluation-strategy/eval-harness-proof.md` |
+| M2 | **Failure audit log** | ✅ Complete | `02-failure-discovery/audit-log.md` |
+| M2 | **Failure Taxonomy** | ✅ Complete | `02-failure-discovery/failure-taxonomy.md` |
+| M3 | **Runnable eval suite** (results) | ✅ Complete | `03-eval-suites/lab-1-eval-suite.md` |
+| M3 | **Trajectory eval** (scorecard) | ✅ Complete | `03-eval-suites/lab-1b-trajectory.md` |
+| M3 | **Judge calibration** (κ) | ✅ Complete | `03-eval-suites/lab-judge-calibration.md` |
+| M3 | **Eval Spec** (5-part spec + audience messages) | ✅ Complete | `03-eval-suites/lab-2-eval-spec.md` |
+| M4 | **Eval gate map** (severity × placement) | ✅ Complete | `04-eval-gates/lab-1-gate-map.md` |
+| M4 | **CI gate policy** (PR #218 replay) | ✅ Complete | `04-eval-gates/lab-ci-gate-policy.md` |
+| M4 | **Launch strategy** (release criteria + CI policy + mitigation) | ✅ Complete | `04-eval-gates/lab-2-launch-strategy.md` |
+| M5 | **Coverage matrix** | Not started | `05-scale/lab-1-coverage-matrix.md` |
+| M5 | **Eval budget** | Not started | `05-scale/lab-2-budget-crisis.md` |
+| M6 | **Ship / Hold memo** | Not started | `06-culture/lab-1-ship-hold-memo.md` |
+| M6 | **Final pitch deck** (generated HTML) | Not started | `06-culture/lab-2-final-pitch.html` |
 
 ## The feature in one sentence
 
-_What LLM feature are you evaluating, who relies on it, and what is the cost of getting it wrong?_
+Ascend IQ gives VP-level strategists and product leaders verified, citation-backed market intelligence; an unsupported answer can undermine high-stakes roadmap decisions and Enterprise trust.
 
 ---
 
