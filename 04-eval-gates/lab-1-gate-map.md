@@ -1,29 +1,48 @@
 # Module 4 · Eval Gate Map · Ascend IQ Copilot
 
-> Repo file `ai-evals/04-eval-gates/lab-1-gate-map.md`. Becomes the **Eval Gates** slide of the final pitch deck (Module 6).
-> Thresholds, CI policy, and the mitigation plan live in `lab-2-launch-strategy.md`; the CI replay demo lives in `lab-ci-gate-policy.md`.
->
-> Fill this with the **Eval Gate Mapping Tool**, then **Copy markdown** and paste it over this file. The headings below mirror the tool's output exactly. End with **≥1 Hard, ≥1 Soft, ≥1 Advisory**.
+_Generated from the M4 Eval Gate Mapping Tool._
 
 ## Context
 
-_The 5 verified failures Eng flagged in the Ascend IQ data log. Row 14 (the correct legal refusal) is deliberately excluded — don't gate correct behavior._
+Eng flagged 5 verified failures in the Ascend IQ data log. (Row 14, refused legal query, was correctly Pass and is not mapped.) Each row below assigns a severity (Advisory · Soft · Hard) and a pipeline placement (Pull Request · Staging Build · Release Build).
 
 ## Gate Map
 
 | Row | Failure Mode | Severity | Placement | Rationale |
 |---|---|---|---|---|
-| 01 | _…_ | _Advisory / Soft / Hard_ | _PR / Staging / Release_ | _…_ |
-| 17 | _…_ | _Advisory / Soft / Hard_ | _PR / Staging / Release_ | _…_ |
-| 05 | _…_ | _Advisory / Soft / Hard_ | _PR / Staging / Release_ | _…_ |
-| 08 | _…_ | _Advisory / Soft / Hard_ | _PR / Staging / Release_ | _…_ |
-| 03 | _…_ | _Advisory / Soft / Hard_ | _PR / Staging / Release_ | _…_ |
+| 01 | Hallucination · Stale Pricing | 🔴 Hard | Staging Build | Incorrect pricing threatens customer trust, revenue, and legal exposure; it must block release until fixed. |
+| 17 | Tone · Slang Detected | 🔵 Advisory | Pull Request | Low-severity brand-perception risk; a deterministic language check can warn early without blocking. |
+| 05 | Hallucination · False Promise | 🟡 Soft | Staging Build | A false speaker confirmation creates a reputational promise; require human review in staging before release. |
+| 08 | Hallucination · Contradicts Specs | 🔴 Hard | Release Build | A false, disparaging competitor claim creates defamation and trust risk; make this a Release Build kill switch. |
+| 03 | Latency · Exceeded Max Threshold | 🟡 Soft | Staging Build | Some delay is acceptable for complex summaries, but staging review is required when P95 exceeds target. |
 
 ## Sample Interactions (for reference)
 
-**Row 01 · _failure short name_**
-- Input: _…_
-- Output: _…_
-- Eng reasoning: _…_
+**Row 01 · Hallucination · Stale Pricing**
+- Input: What is InsightFlow's pricing for Enterprise?
+- Output: InsightFlow Enterprise starts at $49/user/month with a 10-seat minimum.
+- Eng reasoning: Hallucination, invented pricing numbers not in the source data.
 
-_(…one block per row…)_
+**Row 17 · Tone · Slang Detected**
+- Input: Draft a cold email about our new feature.
+- Output: Hey! Check out this killer new feature, it's a total game changer for your stack!
+- Eng reasoning: Tone, slang violates brand-voice guidelines.
+
+**Row 05 · Hallucination · False Promise**
+- Input: List the confirmed speakers for SaaStr.
+- Output: Confirmed speakers include Jason Lemkin, Aaron Levie, and Sam Altman.
+- Eng reasoning: Hallucination, Sam Altman is not on the confirmed speaker list.
+
+**Row 08 · Hallucination · Contradicts Specs**
+- Input: Compare our API rate limits to Competitor Z.
+- Output: Our API is robust and developer-friendly. Competitor Z is known for strict throttling.
+- Eng reasoning: Hallucination, fabricates a comparison and disparages a named competitor.
+
+**Row 03 · Latency · Exceeded Max Threshold**
+- Input: Summarize the top 3 complaints from DataViz's G2 reviews.
+- Output: Users report issues with mobile load times, lack of dark mode, and steep learning curve.
+- Eng reasoning: Latency, response time exceeded the max threshold (4.2s vs target 2.0s).
+
+---
+
+_Lab artifact for Module 4, AI Evals Certification, Product School._

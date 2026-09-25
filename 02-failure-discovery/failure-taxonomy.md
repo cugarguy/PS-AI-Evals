@@ -8,7 +8,7 @@
 | Rank | Failure Type | Trust Tag | Agentic Mode | Frequency | Severity | Business Impact |
 |---|---|---|---|---|---|---|
 | #1 | Fabricated Pricing (row 1) | #HALLUCINATION | · | 8 → HIGH | P0 | Pricing risk, potentially blocked revenue, by committing us to a price less than the current price. |
-| #2 | Unprofessional tone drift.  (row 16) | #UX_TRUST | · | 1 → LOW | P1 | User churn, slang and unprofessional tone in summaries make the platform feel low-credibility, especially to senior VPs.  |
+| #2 | Unprofessional tone drift.  (row 16) | #UX_TRUST | · | 1 → LOW | P2 | User churn, slang and unprofessional tone in summaries make the platform feel low-credibility, especially to senior VPs.  |
 | #3 | Outdated reference information (row 3) | #HALLUCINATION | · | 8 → HIGH | P2 | Brand erosion, overconfident answers from stale references degrade trust in AscendIQ's market intelligence.  |
 
 ## #1 Risk · Business Impact Statement
