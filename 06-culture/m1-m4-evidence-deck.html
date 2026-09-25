@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ascend IQ — M1–M4 Evidence Deck</title>
+  <style>
+    :root { color-scheme: dark; --ink: #f6f8fb; --muted: #b7c0cf; --bg: #09111f; --panel: #121f35; --line: #28415f; --blue: #6eb6ff; --red: #ff8f8f; --gold: #ffd166; --green: #79dca4; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--ink); font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    main { width: min(1180px, calc(100% - 40px)); margin: 0 auto; padding: 40px 0 72px; }
+    .eyebrow { color: var(--blue); font-size: .78rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    h1 { max-width: 900px; margin: 12px 0; font-size: clamp(2.4rem, 6vw, 5.4rem); line-height: .96; letter-spacing: -.06em; }
+    h2 { margin: 0 0 14px; font-size: clamp(1.5rem, 3vw, 2.35rem); letter-spacing: -.04em; }
+    h3 { margin: 0 0 8px; font-size: 1rem; }
+    p, li { color: var(--muted); line-height: 1.55; }
+    .lede { max-width: 730px; font-size: 1.2rem; }
+    .notice { margin: 28px 0 46px; padding: 16px 18px; border-left: 4px solid var(--gold); background: #231f13; color: #ffe49a; border-radius: 4px; }
+    .slide { margin: 28px 0; padding: clamp(24px, 4vw, 48px); min-height: 440px; border: 1px solid var(--line); border-radius: 22px; background: linear-gradient(145deg, #152845, var(--panel)); box-shadow: 0 18px 55px rgba(0, 0, 0, .24); }
+    .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 28px; }
+    .grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .card { padding: 20px; border: 1px solid var(--line); border-radius: 14px; background: rgba(7, 17, 31, .38); }
+    .metric { display: block; margin-bottom: 4px; color: var(--ink); font-size: clamp(1.8rem, 4vw, 3.3rem); font-weight: 800; letter-spacing: -.06em; }
+    .tag { display: inline-block; margin: 3px 4px 3px 0; padding: 4px 8px; border: 1px solid currentColor; border-radius: 999px; font-size: .78rem; font-weight: 700; }
+    .hard { color: var(--red); } .soft { color: var(--gold); } .advisory { color: var(--blue); } .pass { color: var(--green); }
+    table { width: 100%; border-collapse: collapse; margin-top: 22px; font-size: .94rem; }
+    th, td { padding: 11px 9px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+    th { color: var(--blue); font-size: .76rem; letter-spacing: .08em; text-transform: uppercase; }
+    .source-list { columns: 2; padding-left: 18px; }
+    a { color: #9ed0ff; }
+    footer { color: var(--muted); font-size: .9rem; text-align: center; }
+    @media (max-width: 760px) { .grid, .grid.two { grid-template-columns: 1fr; } .source-list { columns: 1; } main { width: min(100% - 24px, 1180px); } .slide { min-height: 0; } }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">Product School AI Evals · Interim capstone component</div>
+    <h1>Ascend IQ: the evidence assembled through Module 4</h1>
+    <p class="lede">A working presentation of the strategy, audited failures, evaluation design, and release controls completed so far.</p>
+    <div class="notice"><strong>Not the final Ship/Hold pitch.</strong> Module 5 coverage and budget decisions, plus the Module 6 executive memo and learner-owned recommendation, are intentionally not represented as complete.</div>
+
+    <section class="slide">
+      <div class="eyebrow">01 · Product and quality bar</div>
+      <h2>Verified intelligence is the product promise.</h2>
+      <div class="grid">
+        <div class="card"><h3>Audience</h3><p>VP-level strategists and product leaders at Fortune 500 companies who rely on premium market intelligence.</p></div>
+        <div class="card"><h3>Use case</h3><p>Get specific, verified competitive and market insights without manually searching a dense platform.</p></div>
+        <div class="card"><h3>Promise</h3><p>Citation-backed answers in about five seconds, or within ten seconds when added validation is needed.</p></div>
+      </div>
+      <p><span class="tag">Hallucination</span><span class="tag">Robustness</span><span class="tag">Latency</span></p>
+      <p>Module 1 prioritizes factual integrity over speed when those goals conflict. A single unsupported competitor claim can cost more than a short validation delay.</p>
+    </section>
+
+    <section class="slide">
+      <div class="eyebrow">02 · Failure discovery</div>
+      <h2>The audit found trust-breaking answers, not a theoretical risk.</h2>
+      <div class="grid">
+        <div class="card"><span class="metric">20</span><p>Ascend IQ audit rows, each reviewed against a supplied source.</p></div>
+        <div class="card"><span class="metric">10</span><p>Confirmed failures after human review.</p></div>
+        <div class="card"><span class="metric">P0</span><p>Fabricated or outdated Enterprise pricing is the highest-priority failure.</p></div>
+      </div>
+      <table>
+        <thead><tr><th>Observed pattern</th><th>Evidence</th><th>Business meaning</th></tr></thead>
+        <tbody>
+          <tr><td>Hallucination</td><td>8 tagged failures in this audit</td><td>Grounding failures include an outdated $49 Enterprise price when the supplied source lists $59.</td></tr>
+          <tr><td>UX trust</td><td>2 tagged failures in this audit</td><td>Examples include an integration described as seamless despite a Zapier dependency, and off-brand slang.</td></tr>
+          <tr><td>Priority</td><td>Fabricated pricing, P0</td><td>A false quote can harm Enterprise trust and create a contract-risk scenario.</td></tr>
+        </tbody>
+      </table>
+      <p><strong>Scope note:</strong> these counts are a 20-row course audit, not a production incident rate.</p>
+    </section>
+
+    <section class="slide">
+      <div class="eyebrow">03 · Evaluation design</div>
+      <h2>The P0 needs deterministic protection—and the judge still needs work.</h2>
+      <div class="grid two">
+        <div class="card">
+          <h3>Output evaluation</h3>
+          <p>The pricing case was caught by the LLM judge because $49 contradicted the $59 source. The next intended control is a deterministic comparison of every quoted price to the current verified pricing source.</p>
+          <p><span class="tag pass">P0 detection logic specified</span></p>
+        </div>
+        <div class="card">
+          <h3>Trajectory evaluation</h3>
+          <p>A recorded support-agent trajectory scored <strong>1/6 dimensions passed</strong>. It skipped the ingestion check and drafted an unverified explanation.</p>
+          <p><span class="tag hard">Trajectory verdict: HOLD</span></p>
+        </div>
+      </div>
+      <div class="card" style="margin-top:16px">
+        <h3>Calibration status</h3>
+        <p>The grounding judge measured <strong>κ = −0.29</strong> against a required floor of <strong>κ ≥ 0.60</strong>. That is a failed calibration result, so the judge's output is not sufficient by itself for a release decision. The specified revision rejects claims that cannot be traced to the retrieved source and rejects estimated or rounded numbers.</p>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="eyebrow">04 · Release controls</div>
+      <h2>Evaluators become policy when a regression blocks the release.</h2>
+      <table>
+        <thead><tr><th>Failure</th><th>Enforcement</th><th>Pipeline placement</th></tr></thead>
+        <tbody>
+          <tr><td>Stale pricing</td><td><span class="hard">Hard</span></td><td>Staging build</td></tr>
+          <tr><td>False competitor claim</td><td><span class="hard">Hard</span></td><td>Release-build kill switch</td></tr>
+          <tr><td>False speaker confirmation</td><td><span class="soft">Soft</span></td><td>Staging review</td></tr>
+          <tr><td>Brand-tone slang</td><td><span class="advisory">Advisory</span></td><td>Pull-request check</td></tr>
+          <tr><td>P95 latency over target</td><td><span class="soft">Soft</span></td><td>Staging review</td></tr>
+        </tbody>
+      </table>
+      <div class="card" style="margin-top:22px"><h3>CI replay result: PR #218</h3><p><strong>Blocked.</strong> Faithfulness dropped from 96 to 87, below the 95 floor and nine points below the main baseline. The policy permits at most a five-point regression on this blocking P0 dimension.</p></div>
+    </section>
+
+    <section class="slide">
+      <div class="eyebrow">05 · Current readiness</div>
+      <h2>The completed evidence is sufficient to identify work still required—not to make the final launch call.</h2>
+      <div class="grid">
+        <div class="card"><h3>Remediate and re-evaluate</h3><p>Fix the pricing-grounding path and the failed trajectory behavior, then rerun the relevant evaluation and gate evidence.</p></div>
+        <div class="card"><h3>Calibrate the judge</h3><p>Revise the grounding rubric and reach the required κ ≥ 0.60 agreement floor before relying on judge scores.</p></div>
+        <div class="card"><h3>Complete the capstone inputs</h3><p>Module 5 must establish portfolio coverage, accepted gaps, mitigation, and the budget trade-off before the final executive recommendation.</p></div>
+      </div>
+      <p>The final Module 6 Ship/Hold recommendation remains learner-owned. This deck intentionally does not substitute an interim evidence summary for that decision.</p>
+    </section>
+
+    <section class="slide">
+      <div class="eyebrow">Evidence map</div>
+      <h2>Source artifacts behind this interim deck</h2>
+      <ul class="source-list">
+        <li><a href="../01-evaluation-strategy/strategy-canvas.md">M1 Strategy Canvas</a></li>
+        <li><a href="../01-evaluation-strategy/eval-harness-proof.md">M1 Eval Harness Proof</a></li>
+        <li><a href="../02-failure-discovery/audit-log.md">M2 Failure Audit</a></li>
+        <li><a href="../02-failure-discovery/failure-taxonomy.md">M2 Failure Taxonomy</a></li>
+        <li><a href="../03-eval-suites/lab-1-eval-suite.md">M3 Runnable Eval Suite</a></li>
+        <li><a href="../03-eval-suites/lab-1b-trajectory.md">M3 Trajectory Evaluation</a></li>
+        <li><a href="../03-eval-suites/lab-judge-calibration.md">M3 Judge Calibration</a></li>
+        <li><a href="../03-eval-suites/lab-2-eval-spec.md">M3 Eval Spec</a></li>
+        <li><a href="../04-eval-gates/lab-1-gate-map.md">M4 Gate Map</a></li>
+        <li><a href="../04-eval-gates/lab-ci-gate-policy.md">M4 CI Gate Policy</a></li>
+        <li><a href="../04-eval-gates/lab-2-launch-strategy.md">M4 Launch Strategy</a></li>
+      </ul>
+    </section>
+    <footer>Prepared from completed Module 1–4 artifacts. This interim deck is a working capstone component, not the final course submission.</footer>
+  </main>
+</body>
+</html>

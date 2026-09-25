@@ -28,6 +28,10 @@ This is an in-progress individual submission. Modules 1–4 are complete; Module
 | M6 | **Ship / Hold memo** | Not started | `06-culture/lab-1-ship-hold-memo.md` |
 | M6 | **Final pitch deck** (generated HTML) | Not started | `06-culture/lab-2-final-pitch.html` |
 
+## Interim capstone assembly
+
+The [M1–M4 Evidence Deck](06-culture/m1-m4-evidence-deck.html) assembles the completed strategy, audit, evaluator, and gate evidence into a presentation-ready working component. It is not the final Module 6 Ship/Hold pitch: Module 5 decisions and the learner-owned final recommendation remain pending.
+
 ## The feature in one sentence
 
 Ascend IQ gives VP-level strategists and product leaders verified, citation-backed market intelligence; an unsupported answer can undermine high-stakes roadmap decisions and Enterprise trust.
