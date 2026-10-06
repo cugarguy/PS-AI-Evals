@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ascend IQ — M1–M4 Evidence Deck</title>
+  <title>Ascend IQ — M1–M5 Evidence Deck</title>
   <style>
     :root { color-scheme: dark; --ink: #f6f8fb; --muted: #b7c0cf; --bg: #09111f; --panel: #121f35; --line: #28415f; --blue: #6eb6ff; --red: #ff8f8f; --gold: #ffd166; --green: #79dca4; }
     * { box-sizing: border-box; }
@@ -35,9 +35,9 @@
 <body>
   <main>
     <div class="eyebrow">Product School AI Evals · Interim capstone component</div>
-    <h1>Ascend IQ: the evidence assembled through Module 4</h1>
-    <p class="lede">A working presentation of the strategy, audited failures, evaluation design, and release controls completed so far.</p>
-    <div class="notice"><strong>Not the final Ship/Hold pitch.</strong> Module 5 coverage and budget decisions, plus the Module 6 executive memo and learner-owned recommendation, are intentionally not represented as complete.</div>
+    <h1>Ascend IQ: the evidence assembled through Module 5</h1>
+    <p class="lede">A working presentation of the strategy, audited failures, evaluation design, release controls, coverage choices, and budget decisions completed so far.</p>
+    <div class="notice"><strong>Not the final Ship/Hold pitch.</strong> The Module 6 executive memo and learner-owned recommendation remain incomplete.</div>
 
     <section class="slide">
       <div class="eyebrow">01 · Product and quality bar</div>
@@ -108,12 +108,50 @@
     </section>
 
     <section class="slide">
-      <div class="eyebrow">05 · Current readiness</div>
+      <div class="eyebrow">05 · Coverage and budget</div>
+      <h2>Module 5 makes the portfolio trade-offs visible.</h2>
+      <div class="grid two">
+        <div class="card">
+          <h3>AI-Powered Report Summaries</h3>
+          <p>External product coverage</p>
+          <table>
+            <thead><tr><th>Risk</th><th>Coverage</th></tr></thead>
+            <tbody>
+              <tr><td>Hallucination</td><td>⚠️ Partial</td></tr>
+              <tr><td>Bias</td><td>❌ Gap</td></tr>
+              <tr><td>Latency</td><td>✅ Covered</td></tr>
+              <tr><td>Toxicity</td><td>✅ Covered</td></tr>
+              <tr><td>Drift monitoring</td><td>❌ Gap</td></tr>
+            </tbody>
+          </table>
+          <p>Drift monitoring is the accepted gap. Bias is the critical mitigation gap.</p>
+        </div>
+        <div class="card">
+          <h3>Ascend IQ evaluation budget</h3>
+          <span class="metric">$180K</span>
+          <p>Level 3 spend against a $200K quarterly cap. All three Level 3 slots are used.</p>
+          <table>
+            <thead><tr><th>Failure</th><th>Level</th><th>Cost</th></tr></thead>
+            <tbody>
+              <tr><td>Data fabrication</td><td>L3</td><td>$85K</td></tr>
+              <tr><td>Context specificity</td><td>L3</td><td>$70K</td></tr>
+              <tr><td>Cost overruns</td><td>L3</td><td>$25K</td></tr>
+              <tr><td>Source attribution</td><td>L2</td><td>$6.5K</td></tr>
+              <tr><td>Data bias</td><td>L2</td><td>$5.5K</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <p>Weekly source-attribution audits and weekly stratified bias audits provide the two Level 2 fallbacks.</p>
+    </section>
+
+    <section class="slide">
+      <div class="eyebrow">06 · Current readiness</div>
       <h2>The completed evidence is sufficient to identify work still required—not to make the final launch call.</h2>
       <div class="grid">
         <div class="card"><h3>Remediate and re-evaluate</h3><p>Fix the pricing-grounding path and the failed trajectory behavior, then rerun the relevant evaluation and gate evidence.</p></div>
         <div class="card"><h3>Calibrate the judge</h3><p>Revise the grounding rubric and reach the required κ ≥ 0.60 agreement floor before relying on judge scores.</p></div>
-        <div class="card"><h3>Complete the capstone inputs</h3><p>Module 5 must establish portfolio coverage, accepted gaps, mitigation, and the budget trade-off before the final executive recommendation.</p></div>
+        <div class="card"><h3>Make the final recommendation</h3><p>Use the completed evidence in the Module 6 memo to make the learner-owned Ship, Hold, or conditional-ship recommendation.</p></div>
       </div>
       <p>The final Module 6 Ship/Hold recommendation remains learner-owned. This deck intentionally does not substitute an interim evidence summary for that decision.</p>
     </section>
@@ -133,9 +171,11 @@
         <li><a href="../04-eval-gates/lab-1-gate-map.md">M4 Gate Map</a></li>
         <li><a href="../04-eval-gates/lab-ci-gate-policy.md">M4 CI Gate Policy</a></li>
         <li><a href="../04-eval-gates/lab-2-launch-strategy.md">M4 Launch Strategy</a></li>
+        <li><a href="../05-scale/lab-1-coverage-matrix.md">M5 Coverage Matrix</a></li>
+        <li><a href="../05-scale/lab-2-budget-crisis.md">M5 Budget Crisis</a></li>
       </ul>
     </section>
-    <footer>Prepared from completed Module 1–4 artifacts. This interim deck is a working capstone component, not the final course submission.</footer>
+    <footer>Prepared from completed Module 1–5 artifacts. This interim deck is a working capstone component, not the final course submission.</footer>
   </main>
 </body>
 </html>
