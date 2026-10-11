@@ -2,7 +2,7 @@
 
 > My final project for Product School's **AI Evals** certification. One evaluation system for a real LLM feature, from strategy, through failure discovery and an automated eval suite, to the gates and governance that let it ship safely.
 
-This is an in-progress individual submission. Modules 1–5 are complete; Module 6 remains pending. The repo URL will be the submission record when the final memo and pitch are complete.
+Modules 1–6 lab outputs are complete. The Module 6 memo recommends **HOLD** based on the recorded failed grounding gate, judge calibration, and trajectory results. Completed labs do not imply a passing production release. The final memo and tool-generated HTML pitch are ready for review; LMS submission remains separate.
 
 > **Tools & cost.** The eval platform is **free** — LangSmith's Developer tier (5,000 traces/month) needs **no credit card**. The only real cost is **model usage** (OpenAI or Claude), typically a few cents for the whole course. If your IT blocks LangSmith, **promptfoo** (open-source, no signup, runs locally) is a supported fallback, or follow the instructor's live demo and still complete the written artifacts. Keep model keys in a gitignored `.env`, never commit them.
 
@@ -25,12 +25,16 @@ This is an in-progress individual submission. Modules 1–5 are complete; Module
 | M4 | **Launch strategy** (release criteria + CI policy + mitigation) | ✅ Complete | `04-eval-gates/lab-2-launch-strategy.md` |
 | M5 | **Coverage matrix** | ✅ Complete | `05-scale/lab-1-coverage-matrix.md` |
 | M5 | **Eval budget** | ✅ Complete | `05-scale/lab-2-budget-crisis.md` |
-| M6 | **Ship / Hold memo** | Not started | `06-culture/lab-1-ship-hold-memo.md` |
-| M6 | **Final pitch deck** (generated HTML) | Not started | `06-culture/lab-2-final-pitch.html` |
+| M6 | **Ship / Hold memo** | ✅ Complete · HOLD | `06-culture/lab-1-ship-hold-memo.md` |
+| M6 | **Final pitch deck** (generated HTML) | ✅ Complete | `06-culture/lab-2-final-pitch.html` |
+
+## Final capstone
+
+The [Ship/Hold memo](06-culture/lab-1-ship-hold-memo.md) and [final pitch](06-culture/lab-2-final-pitch.html) use the Module 6 tools' original export functions, populated with the completed repo artifacts. The final call is HOLD. Supporting results include PR #218 faithfulness 87 versus floor 95, judge calibration κ −0.29 versus ≥0.60, and trajectory 1/6 passed. No production pass rate, missing screenshot, or expected revenue loss has been invented. The proposed decision deadline is October 16, 2026.
 
 ## Interim capstone assembly
 
-The [M1–M5 Evidence Deck](06-culture/m1-m5-evidence-deck.html) assembles the completed strategy, audit, evaluator, gate, coverage, and budget evidence into a presentation-ready working component. It is not the final Module 6 Ship/Hold pitch: the learner-owned final recommendation remains pending.
+The [M1–M5 Evidence Deck](06-culture/m1-m5-evidence-deck.html) preserves the earlier assembly of strategy, audit, evaluator, gate, coverage, and budget evidence. The Module 6 final pitch above now provides the capstone decision.
 
 ## The feature in one sentence
 
